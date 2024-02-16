@@ -26,7 +26,6 @@ body {
   width: 100%;
   background: #091153;
   transition: all 0.5s;
-  position: fixed;
 }
 .navigation .logo {
   color: var(--red);
@@ -35,6 +34,15 @@ body {
 }
 .logo span {
   color: var(--dark);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.logo-text {
+  font-size: 1.3rem;
+  color: #fff;
 }
 .navigation ul {
   display: flex;
@@ -59,7 +67,7 @@ body {
   display: none;
 }
 .menu .bar {
-  display: block;
+  /* display: block; */
   width: 28px;
   height: 3px;
   border-radius: 3px;
@@ -71,43 +79,49 @@ body {
 .menu .bar:nth-child(3) {
   background: var(--red);
 }
+
+.nav-item a img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-wpp {
+  width: 30px;
+  height: 30px;
+}
 .home {
-  width: 100%;
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 10%;
-  background: #fff;
-  /* background: #161f73; */
+  justify-items: center;
 }
+
 .content {
-  width: 100%;
-  height: 100vh;
   display: flex;
+  flex: 1;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 10%;
-  background: #fff;
+  justify-content: center;
+  padding: 0 25px;
 }
+
 .home-text {
   max-width: 37rem;
+  /* background-color: #313ca3; */
+  height: auto;
 }
-.home-text .text-h4 {
-  font-size: 2.3rem;
-  margin-top: 16px;
-  /* color: #161f73; */
-  background: -webkit-linear-gradient(#161f73, #313ca3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+ 
 .home-text .text-h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
   line-height: 4rem;
 }
+
+.cta {
+  font-size: 1.3rem;
+}
+
 .home-text p {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .home-btn {
   padding: 15px 45px;
@@ -121,18 +135,42 @@ body {
   background: #fc4c35;
 }
 .home-img img {
-  width: 40vw;
+  width: 30vw;
 }
 .home-img {
-  flex: 1;
-  flex-direction: row;
-  justify-content: center;
   margin-top: 50px;
+  /* background-color: #fc4c35; */
 }
+
+.details {
+  margin-top: 40px;
+  padding: 15px;
+  width: 60%;
+  margin-bottom: 10rem;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.contact-container {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  width: 300px;
+  justify-content: center;
+  margin-bottom: 10rem;
+  background-color: #091153;
+  padding: 7px 10px;
+  border-radius: 10px;
+}
+
+.contact-text {
+  color: #fff;
+}
+
 @media (max-width: 785px) {
-  .navigation {
-    /* padding: 18px 20px; */
-  }
   .menu {
     display: block;
   }
@@ -146,15 +184,6 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
   .nav-menu {
-    /* position: fixed;
-    right: -100%;
-    top: 70px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    background: var(--white);
-    gap: -10px; */
-    margin-right: -40px;
     transition: 0.3s;
   }
   .nav-menu.ativo {
@@ -163,34 +192,46 @@ body {
   .nav-item {
     margin: 16px 0;
   }
-  /*main*/
-  .home {
-    padding: 100px 2%;
-    flex-direction: column;
-    text-align: center;
-    overflow: hidden;
-    /* gap: 5rem; */
+
+  .cta {
+    font-size: 1.6rem;
   }
-  .home .text-h4 {
-    font-size: 30px;
-    margin-top: 16px;
-  }
+
   .home .text-h1 {
     font-size: 2.5rem;
     line-height: 3rem;
+    text-align: center;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 0 25px;
+    justify-content: center;
   }
   .home p {
     font-size: 15px;
-  }
-  .home-img {
-    flex: 1;
-    flex-direction: column;
-    margin-bottom: 16px;
+    text-align: center;
   }
   .home-img img {
-    flex: 1.8;
+    width: 50vw;
   }
-  .home-img div {
-    flex: 1;
+
+  .nav-item a img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .details {
+    width: 80%;
+  }
+
+  .description {
+    font-size: 1.2rem;
   }
 }
