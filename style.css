@@ -42,6 +42,7 @@ body {
 }
 .logo-text {
   font-size: 1.3rem;
+  margin-left: 10px;
   color: #fff;
 }
 .navigation ul {
@@ -149,6 +150,13 @@ body {
   margin-bottom: 10rem;
 }
 
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .description {
   text-align: center;
   font-size: 1.6rem;
@@ -168,6 +176,13 @@ body {
 
 .contact-text {
   color: #fff;
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @media (max-width: 785px) {
